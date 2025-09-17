@@ -19,7 +19,9 @@ jobs:
       - name: Prepare mod folder
         run: |
           mkdir -p build/AdvancedModMenu
-          rsync -av --exclude='.git*' --exclude='.github' --exclude='meta.json' ./ build/AdvancedModMenu/
+          cp mod.txt build/AdvancedModMenu/
+          cp mod.png build/AdvancedModMenu/ || true
+          cp *.lua build/AdvancedModMenu/ || true
 
       - name: Zip mod
         run: |
