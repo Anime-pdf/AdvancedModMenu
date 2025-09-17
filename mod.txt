@@ -1,0 +1,17 @@
+{
+  "name" : "Advanced Mod Menu",
+  "description" : "Revamp basemod's mod menu",
+  "author" : "Animepdf",
+  "contact" : "dc @animepdf",
+  "version" : "1.0",
+  "priority" : 10,
+  "color" : "0 255 255",
+  "image" : "mod.png",
+  "disable_safe_mode" : false,
+  "vr_disabled" : false,
+  "desktop_disbled" : false,
+  "needs_restart" : true
+  "hooks" : [
+    { "hook_id" : "lib/managers/menumanager", "script_path" : "mod.lua" }
+  ]
+}
