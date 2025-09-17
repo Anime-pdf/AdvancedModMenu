@@ -16,7 +16,7 @@ jobs:
       - name: Prepare mod folder
         run: |
           mkdir -p build/AdvancedModMenu
-          rsync -av --exclude='.git*' --exclude='.github' --exlude='meta.json' ./ build/AdvancedModMenu/
+          rsync -av --exclude='.git*' --exclude='.github' --exclude='meta.json' ./ build/AdvancedModMenu/
 
       - name: Zip mod
         run: |
