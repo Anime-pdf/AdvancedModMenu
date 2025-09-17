@@ -100,11 +100,12 @@ function BLTModItem:init(panel, index, mod)
     self._type:set_center_y(row_height/2)
     
     -- update
+    local shouldBeUpdated = BLT.Downloads:get_pending_downloads_for(mod)
     self._type = self._panel:text({
-        text = mod:IsOutdated() and "UPDATE AVAILABLE" or "UP TO DATE",
+        text = shouldBeUpdated and "UPDATE AVAILABLE" or "UP TO DATE",
         font = tweak_data.menu.pd2_small_font,
         font_size = 18,
-        color = mod:IsOutdated() and Color(0.8,0.3,0.3) or Color(0.7,0.7,0.7),
+        color = shouldBeUpdated and Color(0.8,0.3,0.3) or Color(0.7,0.7,0.7),
         x = self._panel:w() - 400,
         y = 0
     })
