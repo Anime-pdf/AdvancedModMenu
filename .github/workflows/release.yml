@@ -22,6 +22,7 @@ jobs:
           cp mod.txt build/AdvancedModMenu/
           cp mod.png build/AdvancedModMenu/ || true
           cp *.lua build/AdvancedModMenu/ || true
+          cp changelog.txt build/AdvancedModMenu/ || true
 
       - name: Zip mod
         run: |

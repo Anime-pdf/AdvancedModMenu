@@ -1,0 +1,12 @@
+v1.1.1
+    replace arrow with padding
+    make mod highlights equaly visible
+    replace solid color with trasparent panel for non-existent mod images
+    handle mod images better
+    add changelog
+
+v1.1.0
+    better updates detection
+
+v1.0.0
+    release
