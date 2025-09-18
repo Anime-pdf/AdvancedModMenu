@@ -24,19 +24,8 @@ function BLTModItem:init(panel, index, mod)
 
     local x = padding
 
-    -- cool arrow
-    self._arrow = self._panel:text({
-        text = ">",
-        font = tweak_data.menu.pd2_medium_font,
-        font_size = tweak_data.menu.pd2_medium_font_size,
-        color = Color.white,
-        x = x,
-        y = 0
-    })
-    local _,_,w,h = self._arrow:text_rect()
-    self._arrow:set_size(w,h)
-    self._arrow:set_center_y(row_height/2)
-    x = x + w + padding
+    -- cool extra padding
+    x = x + 14 + padding
 
     -- icon
     if mod:HasModImage() then
