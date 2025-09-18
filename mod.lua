@@ -29,7 +29,8 @@ function BLTModItem:init(panel, index, mod)
     x = x + 14 + padding
 
     -- icon
-    if mod:HasModImage() then
+    local mod_icon = mod:GetModImage()
+    if mod_icon ~= nil then
         self._icon = self._panel:bitmap({
             texture = mod:GetModImage(),
             w = 24,
@@ -43,7 +44,7 @@ function BLTModItem:init(panel, index, mod)
             h = 24,
             x = x,
             y = (row_height-24)/2,
-            color = Color(0.4, 0.4, 0.4)
+            alpha = 0
         })
     end
     x = x + 24 + padding
