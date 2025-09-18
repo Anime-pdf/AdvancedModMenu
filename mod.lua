@@ -16,8 +16,9 @@ function BLTModItem:init(panel, index, mod)
     })
 
     -- bg
+    self._bgcolor = index%2 == 1 and Color(0.2, 0.2, 0.2) or Color(0.3, 0.3, 0.3)
     self._background = self._panel:rect({
-        color = (index%2 == 1 and Color(0.2, 0.2, 0.2) or Color(0.3, 0.3, 0.3)),
+        color = self._bgcolor,
         alpha = 0.2,
         layer = -1
     })
@@ -114,6 +115,17 @@ function BLTModItem:init(panel, index, mod)
     local _,_,tw2,th2 = self._toggle:text_rect()
     self._toggle:set_size(tw2,th2)
     self._toggle:set_center_y(row_height/2)
+end
+
+function BLTModItem:set_highlight(enabled, no_sound)
+	if self._enabled ~= enabled then
+		self._enabled = enabled
+		self._background:set_color(enabled and Color(0.5, 0.5, 0.5) or self._bgcolor)
+		self._background:set_alpha(enabled and 0.4 or 0.2)
+		if enabled and not no_sound then
+			managers.menu_component:post_event("highlight")
+		end
+	end
 end
 
 -- MOD DOWNLOAD MANAGER
