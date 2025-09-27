@@ -1,9 +1,9 @@
 {
-  "name" : "Advanced Mod Menu",
+  "name" : "Advanced Mod Manager",
   "description" : "Revamp basemod's mod menu",
   "author" : "Animepdf",
   "contact" : "dc @animepdf",
-  "version" : "1.1.1",
+  "version" : "1.1.2",
   "priority" : 10,
   "color" : "0 255 255",
   "image" : "mod.png",
@@ -16,7 +16,7 @@
   ],
   "updates": [
   {
-    "identifier": "advanced_mod_menu",
+    "identifier": "advanced_mod_manager",
     "host": {
       "meta": "https://raw.githubusercontent.com/Anime-pdf/AdvancedModMenu/main/meta.json"
     }
