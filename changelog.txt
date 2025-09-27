@@ -1,3 +1,6 @@
+v1.1.2
+    rename to AdvancedModManager
+
 v1.1.1
     replace arrow with padding
     make mod highlights equaly visible
